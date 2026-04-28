@@ -18,27 +18,44 @@ def save_mock_db(db):
     with open(MOCK_DB_PATH, "w", encoding="utf-8") as f:
         json.dump(db, f, ensure_ascii=False, indent=2)
 
+def is_time_within_hours(time_str: str, operating_hours: str) -> bool:
+    try:
+        start_time, end_time = [t.strip() for t in operating_hours.split("-")]
+        return start_time <= time_str <= end_time
+    except:
+        return True
+
+def get_branch_capacity(branch: dict) -> int:
+    max_tables = 20
+    for date_data in branch.get("availability", {}).values():
+        for time_data in date_data.values():
+            if "total_tables" in time_data:
+                return time_data["total_tables"]
+    return max_tables
+
 @tool
 def check_branch_availability(branch_id: str, date: str, time: str, guests: int) -> str:
     """Hàm này CỰC KỲ QUAN TRỌNG. Bạn CHỈ gọi hàm này khi khách hàng cung cấp đủ 4 thông tin: ID Chi Nhánh, Ngày (YYYY-MM-DD), Khung giờ đón, và Số lượng người. Nó sẽ trả về trạng thái còn bàn hay hết bàn từ hệ thống."""
     db = load_mock_db()
     for branch in db["branches"]:
         if str(branch["id"]) == str(branch_id):
+            if not is_time_within_hours(time, branch.get("operating_hours", "")):
+                return f"Thời gian {time} nằm ngoài giờ hoạt động ({branch.get('operating_hours', '')}) của chi nhánh '{branch['name']}'."
+                
             avail_by_date = branch.get("availability", {})
             avail_by_time = avail_by_date.get(date, {})
             
-            if time in avail_by_time:
-                slot_info = avail_by_time[time]
-                tables_left = slot_info["total_tables"] - slot_info["booked"]
-                # Cứ 4 khách = 1 bàn (giả lập)
-                tables_needed = (int(guests) + 3) // 4
-                
-                if tables_left >= tables_needed:
-                    return f"Trạng thái: CÒN BÀN. Chi nhánh '{branch['name']}' còn chỗ lúc {time} ngày {date} cho {guests} người."
-                else:
-                    return f"Trạng thái: HẾT BÀN. Chi nhánh '{branch['name']}' đã đầy chỗ lúc {time} ngày {date}."
+            total_tables = get_branch_capacity(branch)
+            slot_info = avail_by_time.get(time, {"total_tables": total_tables, "booked": 0})
+            
+            tables_left = slot_info["total_tables"] - slot_info["booked"]
+            # Cứ 4 khách = 1 bàn (giả lập)
+            tables_needed = (int(guests) + 3) // 4
+            
+            if tables_left >= tables_needed:
+                return f"Trạng thái: CÒN BÀN. Chi nhánh '{branch['name']}' còn chỗ lúc {time} ngày {date} cho {guests} người."
             else:
-                return f"Chi nhánh '{branch['name']}' không có thông tin giờ {time} ngày {date}."
+                return f"Trạng thái: HẾT BÀN. Chi nhánh '{branch['name']}' đã đầy chỗ lúc {time} ngày {date}."
                 
     return "Không tìm thấy chi nhánh với ID được cung cấp."
 
@@ -50,39 +67,47 @@ def book_table(branch_id: str, name: str, phone: str, date: str, time: str, gues
     db = load_mock_db()
     for branch in db["branches"]:
         if str(branch["id"]) == str(branch_id):
-            avail_by_date = branch.get("availability", {})
-            avail_by_time = avail_by_date.get(date, {})
-            
-            if time in avail_by_time:
-                slot_info = avail_by_time[time]
-                tables_left = slot_info["total_tables"] - slot_info["booked"]
-                tables_needed = (int(guests) + 3) // 4
+            if not is_time_within_hours(time, branch.get("operating_hours", "")):
+                return f"Đặt bàn thất bại: Thời gian {time} nằm ngoài giờ hoạt động ({branch.get('operating_hours', '')}) của chi nhánh '{branch['name']}'."
                 
-                if tables_left >= tables_needed:
-                    slot_info["booked"] += tables_needed
+            if "availability" not in branch:
+                branch["availability"] = {}
+            if date not in branch["availability"]:
+                branch["availability"][date] = {}
+                
+            avail_by_time = branch["availability"][date]
+            total_tables = get_branch_capacity(branch)
+            
+            if time not in avail_by_time:
+                avail_by_time[time] = {"total_tables": total_tables, "booked": 0}
+                
+            slot_info = avail_by_time[time]
+            tables_left = slot_info["total_tables"] - slot_info["booked"]
+            tables_needed = (int(guests) + 3) // 4
+            
+            if tables_left >= tables_needed:
+                slot_info["booked"] += tables_needed
+                
+                if "reservations" not in db:
+                    db["reservations"] = []
                     
-                    if "reservations" not in db:
-                        db["reservations"] = []
-                        
-                    booking_id = f"RES-{random.randint(1000, 9999)}"
-                    db["reservations"].append({
-                        "booking_id": booking_id,
-                        "branch_id": branch_id,
-                        "branch_name": branch["name"],
-                        "name": name,
-                        "phone": phone,
-                        "date": date,
-                        "time": time,
-                        "guests": guests,
-                        "tables_booked": tables_needed
-                    })
-                    
-                    save_mock_db(db)
-                    return f"Đặt bàn THÀNH CÔNG! Mã xác nhận của khách là #{booking_id}. Thông tin đã được lưu."
-                else:
-                    return f"Đặt bàn thất bại: Chi nhánh '{branch['name']}' không còn đủ bàn lúc {time} ngày {date}."
+                booking_id = f"RES-{random.randint(1000, 9999)}"
+                db["reservations"].append({
+                    "booking_id": booking_id,
+                    "branch_id": branch_id,
+                    "branch_name": branch["name"],
+                    "name": name,
+                    "phone": phone,
+                    "date": date,
+                    "time": time,
+                    "guests": guests,
+                    "tables_booked": tables_needed
+                })
+                
+                save_mock_db(db)
+                return f"Đặt bàn THÀNH CÔNG! Mã xác nhận của khách là #{booking_id}. Thông tin đã được lưu."
             else:
-                return f"Đặt bàn thất bại: Không có ca phục vụ nào vào lúc {time} ngày {date}."
+                return f"Đặt bàn thất bại: Chi nhánh '{branch['name']}' không còn đủ bàn lúc {time} ngày {date}."
                 
     return "Đặt bàn thất bại: Không tìm thấy chi nhánh với ID được cung cấp."
 

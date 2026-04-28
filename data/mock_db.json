@@ -20,7 +20,7 @@
         "current_status": "Sẵn sàng giao hàng"
       },
       "availability": {
-        "2026-04-23": {
+        "2026-04-29": {
           "18:00": {
             "total_tables": 20,
             "booked": 20
@@ -34,7 +34,7 @@
             "booked": 15
           }
         },
-        "2026-04-24": {
+        "2026-04-30": {
           "18:00": {
             "total_tables": 20,
             "booked": 10
@@ -48,7 +48,7 @@
             "booked": 5
           }
         },
-        "2026-04-25": {
+        "2026-05-01": {
           "18:00": {
             "total_tables": 20,
             "booked": 15
@@ -62,7 +62,7 @@
             "booked": 10
           }
         },
-        "2026-04-26": {
+        "2026-05-02": {
           "18:00": {
             "total_tables": 20,
             "booked": 12
@@ -98,7 +98,7 @@
         "current_status": "Tạm ngưng do quá tải đơn"
       },
       "availability": {
-        "2026-04-23": {
+        "2026-04-29": {
           "18:00": {
             "total_tables": 15,
             "booked": 5
@@ -112,7 +112,7 @@
             "booked": 8
           }
         },
-        "2026-04-24": {
+        "2026-04-30": {
           "18:00": {
             "total_tables": 15,
             "booked": 10
@@ -126,7 +126,7 @@
             "booked": 10
           }
         },
-        "2026-04-25": {
+        "2026-05-01": {
           "18:00": {
             "total_tables": 15,
             "booked": 15
@@ -140,7 +140,7 @@
             "booked": 15
           }
         },
-        "2026-04-26": {
+        "2026-05-02": {
           "18:00": {
             "total_tables": 15,
             "booked": 8
@@ -176,7 +176,7 @@
         "current_status": "Sẵn sàng giao hàng"
       },
       "availability": {
-        "2026-04-23": {
+        "2026-04-29": {
           "18:00": {
             "total_tables": 25,
             "booked": 10
@@ -190,7 +190,7 @@
             "booked": 15
           }
         },
-        "2026-04-24": {
+        "2026-04-30": {
           "18:00": {
             "total_tables": 25,
             "booked": 20
@@ -204,7 +204,7 @@
             "booked": 20
           }
         },
-        "2026-04-25": {
+        "2026-05-01": {
           "18:00": {
             "total_tables": 25,
             "booked": 25
@@ -218,7 +218,7 @@
             "booked": 18
           }
         },
-        "2026-04-26": {
+        "2026-05-02": {
           "18:00": {
             "total_tables": 25,
             "booked": 15
@@ -254,7 +254,7 @@
         "current_status": "Sẵn sàng giao hàng"
       },
       "availability": {
-        "2026-04-23": {
+        "2026-04-29": {
           "18:00": {
             "total_tables": 30,
             "booked": 10
@@ -268,7 +268,7 @@
             "booked": 10
           }
         },
-        "2026-04-24": {
+        "2026-04-30": {
           "18:00": {
             "total_tables": 30,
             "booked": 30
@@ -282,7 +282,7 @@
             "booked": 25
           }
         },
-        "2026-04-25": {
+        "2026-05-01": {
           "18:00": {
             "total_tables": 30,
             "booked": 28
@@ -296,7 +296,7 @@
             "booked": 30
           }
         },
-        "2026-04-26": {
+        "2026-05-02": {
           "18:00": {
             "total_tables": 30,
             "booked": 20
@@ -332,7 +332,7 @@
         "current_status": "Sẵn sàng giao hàng"
       },
       "availability": {
-        "2026-04-23": {
+        "2026-04-29": {
           "18:00": {
             "total_tables": 18,
             "booked": 18
@@ -346,7 +346,7 @@
             "booked": 4
           }
         },
-        "2026-04-24": {
+        "2026-04-30": {
           "18:00": {
             "total_tables": 18,
             "booked": 15
@@ -360,7 +360,7 @@
             "booked": 10
           }
         },
-        "2026-04-25": {
+        "2026-05-01": {
           "18:00": {
             "total_tables": 18,
             "booked": 10
@@ -374,7 +374,7 @@
             "booked": 12
           }
         },
-        "2026-04-26": {
+        "2026-05-02": {
           "18:00": {
             "total_tables": 18,
             "booked": 5
@@ -398,7 +398,7 @@
       "branch_name": "Chi nhánh Cầu Giấy",
       "name": "Thái",
       "phone": "0123456789",
-      "date": "2026-04-23",
+      "date": "2026-04-29",
       "time": "19:00",
       "guests": 4,
       "tables_booked": 1
@@ -409,7 +409,7 @@
       "branch_name": "Chi nhánh Cầu Giấy",
       "name": "Thái",
       "phone": "0123456789",
-      "date": "2026-04-23",
+      "date": "2026-04-29",
       "time": "19:00",
       "guests": 4,
       "tables_booked": 1
