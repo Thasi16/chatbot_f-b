@@ -58,8 +58,6 @@ Tạo một file `.env` ở thư mục gốc của dự án (`fb_advisor_agent/`
 ```env
 GOOGLE_API_KEY=your_gemini_api_key_here
 ```
-*(Bạn có thể lấy API Key miễn phí tại [Google AI Studio](https://aistudio.google.com/))*
-
 ---
 
 ## 💻 Hướng Dẫn Sử Dụng (Usage)
@@ -125,8 +123,4 @@ fb_advisor_agent/
 
 ---
 
-## 🤝 Đóng Góp (Contributing)
-Mọi đóng góp (Pull Request, Issues) đều được chào đón để giúp dự án hoàn thiện hơn.
 
-## 📄 Giấy Phép (License)
-Dự án được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết.
