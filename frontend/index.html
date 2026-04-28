@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | F&B AI Advisor</title>
+    <!-- Modern Typography: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link to custom vanilla stylesheet -->
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+    <div class="app-background">
+        <!-- Ambient glowing shapes for dark mode aesthetics -->
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <div class="chat-container glass-panel">
+        <header class="chat-header">
+            <div class="header-left">
+                <div class="avatar-wrap">
+                    <div class="avatar-img">🤖</div>
+                    <div class="status-dot"></div>
+                </div>
+                <div class="title-container">
+                    <h1>Trợ lý ảo</h1>
+                    <p>Hỗ trợ khách hàng 24/7</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-btn" title="Chuyển đổi giao diện Sáng/Tối">☀️</button>
+                <button id="clear-chat" class="icon-btn" title="Tạo mới cuộc trò chuyện">🧹</button>
+            </div>
+        </header>
+
+        <main class="chat-box" id="chat-box">
+            <div class="message bot">
+                <div class="avatar-img-small">🤖</div>
+                <div class="msg-content">Kính chào quý khách! Tôi là trợ lý ảo. Tôi có thể giúp gì cho quý khách về thực đơn hay đặt bàn hôm nay ạ?</div>
+            </div>
+            
+            <!-- Suggested Questions -->
+            <div class="suggestions" id="suggestions">
+                <div class="suggestion-chip" onclick="sendSuggestion('Nhà hàng có bao nhiêu chi nhánh?')">Nhà hàng có bao nhiêu chi nhánh?</div>
+                <div class="suggestion-chip" onclick="sendSuggestion('Menu của nhà hàng')">Menu của nhà hàng</div>
+            </div>
+        </main>
+
+        <footer class="input-area">
+            <div class="input-wrap">
+                <input type="text" id="user-input" placeholder="Nhập câu hỏi hoặc yêu cầu..." autocomplete="off">
+                <button id="send-btn" aria-label="Gửi">
+                    <!-- Icon gửi: SVG -->
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link to Javascript Logic -->
+    <script src="/frontend/app.js"></script>
+</body>
+
+</html>

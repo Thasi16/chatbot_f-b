@@ -1,0 +1,418 @@
+{
+  "branches": [
+    {
+      "id": "1",
+      "name": "Chi nhánh Hoàn Kiếm",
+      "address": "12 Lý Thái Tổ, Tràng Tiền, Hoàn Kiếm, Hà Nội",
+      "coordinates": {
+        "lat": 21.0267,
+        "lng": 105.8542
+      },
+      "operating_hours": "09:00 - 22:00",
+      "features": [
+        "Khu vui chơi trẻ em trong nhà",
+        "Phù hợp gia đình có trẻ nhỏ"
+      ],
+      "parking": "Miễn phí đỗ xe (cả ô tô và xe máy) cho khách dùng bữa tại nhà hàng.",
+      "delivery_service": {
+        "is_active": true,
+        "max_radius_km": 10,
+        "current_status": "Sẵn sàng giao hàng"
+      },
+      "availability": {
+        "2026-04-23": {
+          "18:00": {
+            "total_tables": 20,
+            "booked": 20
+          },
+          "19:00": {
+            "total_tables": 20,
+            "booked": 20
+          },
+          "20:00": {
+            "total_tables": 20,
+            "booked": 15
+          }
+        },
+        "2026-04-24": {
+          "18:00": {
+            "total_tables": 20,
+            "booked": 10
+          },
+          "19:00": {
+            "total_tables": 20,
+            "booked": 18
+          },
+          "20:00": {
+            "total_tables": 20,
+            "booked": 5
+          }
+        },
+        "2026-04-25": {
+          "18:00": {
+            "total_tables": 20,
+            "booked": 15
+          },
+          "19:00": {
+            "total_tables": 20,
+            "booked": 15
+          },
+          "20:00": {
+            "total_tables": 20,
+            "booked": 10
+          }
+        },
+        "2026-04-26": {
+          "18:00": {
+            "total_tables": 20,
+            "booked": 12
+          },
+          "19:00": {
+            "total_tables": 20,
+            "booked": 20
+          },
+          "20:00": {
+            "total_tables": 20,
+            "booked": 8
+          }
+        }
+      }
+    },
+    {
+      "id": "2",
+      "name": "Chi nhánh Ba Đình",
+      "address": "45 Kim Mã, Ba Đình, Hà Nội",
+      "coordinates": {
+        "lat": 21.0315,
+        "lng": 105.8285
+      },
+      "operating_hours": "10:00 - 23:00",
+      "features": [
+        "Hệ thống 5 phòng VIP cách âm",
+        "Thích hợp tiếp đối tác, khách VIP"
+      ],
+      "parking": "Miễn phí đỗ xe máy. LƯU Ý: Không có chỗ đỗ ô tô trực tiếp, khách hàng gửi ô tô tại bãi dịch vụ cách nhà hàng 600m.",
+      "delivery_service": {
+        "is_active": false,
+        "max_radius_km": 5,
+        "current_status": "Tạm ngưng do quá tải đơn"
+      },
+      "availability": {
+        "2026-04-23": {
+          "18:00": {
+            "total_tables": 15,
+            "booked": 5
+          },
+          "19:00": {
+            "total_tables": 15,
+            "booked": 15
+          },
+          "20:00": {
+            "total_tables": 15,
+            "booked": 8
+          }
+        },
+        "2026-04-24": {
+          "18:00": {
+            "total_tables": 15,
+            "booked": 10
+          },
+          "19:00": {
+            "total_tables": 15,
+            "booked": 12
+          },
+          "20:00": {
+            "total_tables": 15,
+            "booked": 10
+          }
+        },
+        "2026-04-25": {
+          "18:00": {
+            "total_tables": 15,
+            "booked": 15
+          },
+          "19:00": {
+            "total_tables": 15,
+            "booked": 15
+          },
+          "20:00": {
+            "total_tables": 15,
+            "booked": 15
+          }
+        },
+        "2026-04-26": {
+          "18:00": {
+            "total_tables": 15,
+            "booked": 8
+          },
+          "19:00": {
+            "total_tables": 15,
+            "booked": 10
+          },
+          "20:00": {
+            "total_tables": 15,
+            "booked": 5
+          }
+        }
+      }
+    },
+    {
+      "id": "3",
+      "name": "Chi nhánh Cầu Giấy",
+      "address": "89 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội",
+      "coordinates": {
+        "lat": 21.0375,
+        "lng": 105.7899
+      },
+      "operating_hours": "09:30 - 22:30",
+      "features": [
+        "Không gian sảnh siêu rộng",
+        "Phù hợp tổ chức sinh nhật, liên hoan công ty/nhóm đông"
+      ],
+      "parking": "Miễn phí đỗ xe (cả ô tô và xe máy) cho khách dùng bữa tại nhà hàng.",
+      "delivery_service": {
+        "is_active": true,
+        "max_radius_km": 10,
+        "current_status": "Sẵn sàng giao hàng"
+      },
+      "availability": {
+        "2026-04-23": {
+          "18:00": {
+            "total_tables": 25,
+            "booked": 10
+          },
+          "19:00": {
+            "total_tables": 25,
+            "booked": 24
+          },
+          "20:00": {
+            "total_tables": 25,
+            "booked": 15
+          }
+        },
+        "2026-04-24": {
+          "18:00": {
+            "total_tables": 25,
+            "booked": 20
+          },
+          "19:00": {
+            "total_tables": 25,
+            "booked": 25
+          },
+          "20:00": {
+            "total_tables": 25,
+            "booked": 20
+          }
+        },
+        "2026-04-25": {
+          "18:00": {
+            "total_tables": 25,
+            "booked": 25
+          },
+          "19:00": {
+            "total_tables": 25,
+            "booked": 25
+          },
+          "20:00": {
+            "total_tables": 25,
+            "booked": 18
+          }
+        },
+        "2026-04-26": {
+          "18:00": {
+            "total_tables": 25,
+            "booked": 15
+          },
+          "19:00": {
+            "total_tables": 25,
+            "booked": 20
+          },
+          "20:00": {
+            "total_tables": 25,
+            "booked": 10
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "name": "Chi nhánh Tây Hồ",
+      "address": "125 Trích Sài, Bưởi, Tây Hồ, Hà Nội",
+      "coordinates": {
+        "lat": 21.0494,
+        "lng": 105.8115
+      },
+      "operating_hours": "10:00 - 23:30",
+      "features": [
+        "View nhìn thẳng ra Hồ Tây",
+        "Không gian lãng mạn, phù hợp các cặp đôi hẹn hò"
+      ],
+      "parking": "Miễn phí đỗ xe (cả ô tô và xe máy) cho khách dùng bữa tại nhà hàng.",
+      "delivery_service": {
+        "is_active": true,
+        "max_radius_km": 10,
+        "current_status": "Sẵn sàng giao hàng"
+      },
+      "availability": {
+        "2026-04-23": {
+          "18:00": {
+            "total_tables": 30,
+            "booked": 10
+          },
+          "19:00": {
+            "total_tables": 30,
+            "booked": 15
+          },
+          "20:00": {
+            "total_tables": 30,
+            "booked": 10
+          }
+        },
+        "2026-04-24": {
+          "18:00": {
+            "total_tables": 30,
+            "booked": 30
+          },
+          "19:00": {
+            "total_tables": 30,
+            "booked": 30
+          },
+          "20:00": {
+            "total_tables": 30,
+            "booked": 25
+          }
+        },
+        "2026-04-25": {
+          "18:00": {
+            "total_tables": 30,
+            "booked": 28
+          },
+          "19:00": {
+            "total_tables": 30,
+            "booked": 30
+          },
+          "20:00": {
+            "total_tables": 30,
+            "booked": 30
+          }
+        },
+        "2026-04-26": {
+          "18:00": {
+            "total_tables": 30,
+            "booked": 20
+          },
+          "19:00": {
+            "total_tables": 30,
+            "booked": 25
+          },
+          "20:00": {
+            "total_tables": 30,
+            "booked": 15
+          }
+        }
+      }
+    },
+    {
+      "id": "5",
+      "name": "Chi nhánh Đống Đa",
+      "address": "200 Thái Hà, Trung Liệt, Đống Đa, Hà Nội",
+      "coordinates": {
+        "lat": 21.0118,
+        "lng": 105.8184
+      },
+      "operating_hours": "08:30 - 22:00",
+      "features": [
+        "Sân vườn ngoài trời thoáng mát",
+        "Nhiều cây xanh, thân thiện với thú cưng (Pet-friendly)"
+      ],
+      "parking": "Miễn phí đỗ xe (cả ô tô và xe máy) cho khách dùng bữa tại nhà hàng.",
+      "delivery_service": {
+        "is_active": true,
+        "max_radius_km": 10,
+        "current_status": "Sẵn sàng giao hàng"
+      },
+      "availability": {
+        "2026-04-23": {
+          "18:00": {
+            "total_tables": 18,
+            "booked": 18
+          },
+          "19:00": {
+            "total_tables": 18,
+            "booked": 10
+          },
+          "20:00": {
+            "total_tables": 18,
+            "booked": 4
+          }
+        },
+        "2026-04-24": {
+          "18:00": {
+            "total_tables": 18,
+            "booked": 15
+          },
+          "19:00": {
+            "total_tables": 18,
+            "booked": 18
+          },
+          "20:00": {
+            "total_tables": 18,
+            "booked": 10
+          }
+        },
+        "2026-04-25": {
+          "18:00": {
+            "total_tables": 18,
+            "booked": 10
+          },
+          "19:00": {
+            "total_tables": 18,
+            "booked": 15
+          },
+          "20:00": {
+            "total_tables": 18,
+            "booked": 12
+          }
+        },
+        "2026-04-26": {
+          "18:00": {
+            "total_tables": 18,
+            "booked": 5
+          },
+          "19:00": {
+            "total_tables": 18,
+            "booked": 8
+          },
+          "20:00": {
+            "total_tables": 18,
+            "booked": 5
+          }
+        }
+      }
+    }
+  ],
+  "reservations": [
+    {
+      "booking_id": "RES-1580",
+      "branch_id": "3",
+      "branch_name": "Chi nhánh Cầu Giấy",
+      "name": "Thái",
+      "phone": "0123456789",
+      "date": "2026-04-23",
+      "time": "19:00",
+      "guests": 4,
+      "tables_booked": 1
+    },
+    {
+      "booking_id": "RES-7568",
+      "branch_id": "3",
+      "branch_name": "Chi nhánh Cầu Giấy",
+      "name": "Thái",
+      "phone": "0123456789",
+      "date": "2026-04-23",
+      "time": "19:00",
+      "guests": 4,
+      "tables_booked": 1
+    }
+  ]
+}
