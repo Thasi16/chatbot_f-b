@@ -1,4 +1,4 @@
-# 🤖 AI F&B Advisor - Trợ lý Ẩm thực Thông minh
+# AI F&B Advisor - Trợ lý Ẩm thực Thông minh
 
 Dự án này là một hệ thống Chatbot Trợ lý Ảo chuyên nghiệp dành cho lĩnh vực F&B (Nhà hàng, Quán ăn), được xây dựng trên nền tảng **LangGraph**, **Gemini API** và **FastAPI**. 
 

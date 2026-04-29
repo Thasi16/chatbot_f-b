@@ -37,7 +37,7 @@
         "2026-04-30": {
           "18:00": {
             "total_tables": 20,
-            "booked": 10
+            "booked": 11
           },
           "19:00": {
             "total_tables": 20,
@@ -411,6 +411,17 @@
       "phone": "0123456789",
       "date": "2026-04-29",
       "time": "19:00",
+      "guests": 4,
+      "tables_booked": 1
+    },
+    {
+      "booking_id": "RES-7806",
+      "branch_id": "1",
+      "branch_name": "Chi nhánh Hoàn Kiếm",
+      "name": "Thái",
+      "phone": "0123456789",
+      "date": "2026-04-30",
+      "time": "18:00",
       "guests": 4,
       "tables_booked": 1
     }
